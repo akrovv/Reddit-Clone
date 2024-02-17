@@ -1,0 +1,21 @@
+p, user, /static/*, GET
+p, user, /, GET
+p, user, /signup, GET
+p, user, /login, GET
+p, user, /createpost, GET
+p, user, /u/*, GET
+p, user, /a/*, GET
+p, user, /api/posts/*, GET
+p, user, /api/user/*, GET
+p, user, /api/post/*, GET
+p, user, /api/register, POST
+p, user, /api/login, POST
+
+
+p, member, /api/post/*, (DELETE)|(POST)
+p, member, /api/posts, POST
+
+g, anonymous, user
+g, member, member
+
+g, member, user
